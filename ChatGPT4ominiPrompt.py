@@ -13,9 +13,12 @@ Similarity = {
     - CONTRADICTION (opposes) the Expected response
     - NEUTRAL (neither supports nor opposes) with respect to the Expected response
 
-   Ensure that the output is in the following JSON format exactly as shown:
+    Additionally, calculate a similarity score between the Expected and Actual responses. This score should range from 0 to 1, where 1 indicates perfect similarity and 0 indicates no similarity.
+
+    Ensure that the output is in the following JSON format exactly as shown:
     {{
       "Sentiment": "[ENTAILMENT, CONTRADICTION, or NEUTRAL]",
+      "Similarity_Score": [similarity_score],
       "explanation": "[brief explanation for the intent classified reason]"
     }}"""
 }
